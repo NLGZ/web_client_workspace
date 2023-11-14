@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML종합실습문제</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>납품자정보</legend>
+
+      <label for="memberName">1. 납품자명(필수) : </label>
+      <input type="text" id="memberName" name="memberName" required />
+      <br />
+      <br>
+      <label for="memberEmail">2. 이메일(필수) : </label>
+      <input
+        type="email"
+        name="memberEmail"
+        id="memberEmail"
+        placeholder="answer@naver.com"
+      />
+      <br />
+      <br>
+      <label for="homepage">3. 홈페이지:</label>
+      <input type="text" id="homepage" name="homepage" value="http://" />
+      <br />
+      <br>
+      <label for="local">4. 지역 : </label>
+      <input
+        type="text"
+        name="local"
+        id="local"
+        list="locals"
+        placeholder="부산"
+      />
+      <datalist id="locals">
+        <option value="부산" />
+        <option value="서울" />
+        <option value="경기" />
+      </datalist>
+    </fieldset>
+    <br />
+
+    <fieldset>
+        <legend>납품 정보</legend>
+      <label for="product"><label><li>상품명 : </label>
+      <input type="text" id="product" name="product" required/>
+     <br>
+     <br>   
+      <label for="quntity"><label><li>납품수량 : </label>
+        <input type="text" id="quantity" name="quantity" placeholder="최소 100">
+     <br>
+     <br>
+    <label for="score"><li>납품등급(필수) : </label>
+      <input type="range" name="score" id="score" min="0" max="100">
+      <br>
+      <br>
+      <style>
+        #guitar {
+            height: 60px;
+        }
+    </style>
+    
+    <label for="guitar"><li>기타사항 : </label>
+    <input type="text" id="guitar" name="guitar" size="25">
+    
+    </fieldset>
+
+  </body>
+</html>
