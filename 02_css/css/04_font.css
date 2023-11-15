@@ -1,0 +1,47 @@
+/* 폰트 종류구분 */
+/* serif 글자끝에 삐침 있음 (궁서체)*/
+/* sans-serif 글자 끝에 삐침 없음 (고딕체)*/
+/* cursive (필기체) */
+/* monospace (글자간격 모두 동일*/
+
+* {
+  font-size: 24px;
+}
+
+#font1 {
+  /* 폰트나열, 왼쪽부터 존재하는지 검사 후 적용, 마지막 generic-family를 작성*/
+  font-family: consolas, monospace;
+}
+#font2 {
+  font-family: "Sunflower", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 48px; /* 자간높이 */
+  /* 모아쓰기 shorthand */
+  /* font:  https://www.w3schools.com/cssref/pr_font_font.php */
+  font: italic bold 48px/48px "Sunflower", sans-serif;
+}
+
+#font3 {
+  font-family: "Moirai One", sans-serif;
+}
+#parent {
+    font-size: px;
+}
+html {
+    font-size: 100px;
+}
+
+#parent :first-child {
+    font-size: 24px; /*절대크기 */
+}
+#parent :nth-child(2) {
+    font-size: 150%; /*부모요소 상대크기*/
+}
+#parent :nth-child(3) {
+    font-size: 1.5em; /*부모요소 상대크기*/
+}
+#parent :last-child {
+    font-size: 1.5rem; /*루트(html기준)요소 상대크기 */
+}
