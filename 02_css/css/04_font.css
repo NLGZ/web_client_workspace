@@ -15,6 +15,7 @@
 #font2 {
   font-family: "Sunflower", sans-serif;
   font-size: 48px;
+  /* 300(light) 400(regular) 700(bold) */
   font-weight: bold;
   font-style: italic;
   line-height: 48px; /* 자간높이 */
@@ -27,21 +28,21 @@
   font-family: "Moirai One", sans-serif;
 }
 #parent {
-    font-size: px;
+  font-size: px;
 }
 html {
-    font-size: 100px;
+  font-size: 100px;
 }
 
 #parent :first-child {
-    font-size: 24px; /*절대크기 */
+  font-size: 24px; /*절대크기 */
 }
 #parent :nth-child(2) {
-    font-size: 150%; /*부모요소 상대크기*/
+  font-size: 150%; /*부모요소 상대크기*/
 }
 #parent :nth-child(3) {
-    font-size: 1.5em; /*부모요소 상대크기*/
+  font-size: 1.5em; /*부모요소 상대크기*/
 }
 #parent :last-child {
-    font-size: 1.5rem; /*루트(html기준)요소 상대크기 */
+  font-size: 1.5rem; /*루트(html기준)요소 상대크기 */
 }
