@@ -6,38 +6,28 @@
 }
 
 body:hover .box {
-    animation-name: my-ani;
-    animation-duration: 2s;
-    animation-direction: normal;
-    animation-iteration-count: ease;
-    animation-delay: 1s: 
-    animation-timing-function: ease;
-    
-}
-/* animation: name duration timing-function delay interation-countdirection */
+  animation-name: my-ani;
+  animation-duration: 2s;
+  animation-direction: normal; /* normal | reverse | alternate */
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  animation-timing-function: ease;
 
-/* body에 hover하면 box에 적용 /
-body:hover .box{
-    / 적용할 keyFrame /
-    animation-name: my-ani;
-    / animation 지속시간 /
-    animation-duration: 1s;
-    animation-direction: reverse;
+  /* animation: name duration timing-function delay iteration-count direction   */
+  /* animation: my-ani 2s ease 1s infinite normal; */
 }
 
-@keyframes my-ani{
-    / 0%-시작상태, 100%완료상태 /
-    / 좌표는 시작상태 기준 /
-    / 상태하나씩 작성*/
-25% {
-  transform: translate(300px, 0);
-}
-50% {
-  transform: translate(300px, 300px);
-}
-75% {
-  transform: translate(0, 300px);
-}
-100% {
-  transform: translate(0, 0);
+@keyframes my-ani {
+  25% {
+    transform: translate(300px, 0);
+  }
+  50% {
+    transform: translate(300px, 300px);
+  }
+  75% {
+    transform: translate(0, 300px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }

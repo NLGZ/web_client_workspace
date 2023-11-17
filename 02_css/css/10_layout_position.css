@@ -1,6 +1,6 @@
 .outer {
   background-color: grey;
-  border: 1px solid black;
+  border: 1px soild #000;
 }
 .first {
   width: 300px;
@@ -11,15 +11,15 @@
   width: 200px;
   height: 200px;
   background-color: violet;
-  top: 50px; /*offset 위로부터 50px 떨어뜨리기*/
-  left: 50px; /*offset 좌로부터 50px 떨어뜨리기*/
+  top: 50px; /* offset 위로부터 50px 떨어뜨리기 */
+  left: 50px; /* offset 좌로부터 50px 떨어뜨리기 */
 }
 .third {
   width: 100px;
   height: 100px;
   background-color: magenta;
-  top: 100px; /*offset 위로부터 50px 떨어뜨리기*/
-  left: 100px; /*offset 좌로부터 50px 떨어뜨리기*/
+  top: 100px;
+  left: 100px;
 }
 .circle {
   width: 50px;
@@ -42,30 +42,38 @@
 .p-sticky {
   position: sticky;
   top: 0px;
-  border: 1px solid;
-  background-color: red;
-  z-index: 999; /*값이 클수록 앞(사용자)에 위치*/
+  background-color: goldenrod;
+  z-index: 999; /* 값이 클수록 앞(사용자)에 위치 */
 }
-
+.wrap {
+  height: 80px;
+  margin: 30px;
+}
 .box {
   width: 50px;
   height: 50px;
-  border: 1px solid black;
+  border: 1px solid #000;
   position: absolute;
 }
-
-box1 {
+.box1 {
   background-color: antiquewhite;
 }
-box2 {
+.box2 {
   background-color: cadetblue;
   top: 20px;
   left: 20px;
 }
-box3 {
+.box3 {
   background-color: steelblue;
   top: 40px;
   left: 40px;
 }
-
-.z-10 { z-index: 1-10;}
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-30 {
+  z-index: 30;
+}
