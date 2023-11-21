@@ -47,11 +47,11 @@
 /* 트랜지션이 적용된 게시글 카드 */
 .card {
   display: inline-block;
-  width: 380px;
-  height: 380px;
+  width: 500px;
+  height: 700px;
   margin: 10px;
   padding: 30px;
-  background-color: #99aeff;
+  background: grey;
   color: #fff;
   font-family: "Courier New", Courier, monospace;
   cursor: pointer;
@@ -79,7 +79,7 @@
   opacity: 0.5;
 }
 .transition {
-  transition-duration: 0.5s;
+  transition-duration: 0.2s;
 }
 .card:hover {
   box-shadow: 0 35px 77px -17px rgba(0, 0, 0, 0.8);
@@ -88,4 +88,10 @@
   transform: translate(0, 0);
   opacity: 1;
   font-weight: 700;
+}
+.card img {
+  max-width: 120%; /* 이미지가 카드 내에서 최대 폭을 가지도록 함 */
+  height: auto; /* 가로 폭에 따라 세로 비율을 유지 */
+  margin-top: 0px; /* 이미지 위 여백 조정 */
+  border-radius: 10px; /* 이미지 모서리를 둥글게 만듦 (원하는 값으로 조정 가능) */
 }
