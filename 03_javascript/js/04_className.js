@@ -7,7 +7,7 @@
  *    - toggle(className: string)
  */
 function checkSubject(checkbox) {
-  console.log("checkSubject", checkbox);
+  console.log('checkSubject', checkbox);
   // 부모td 찾기
   const td = checkbox.parentElement;
   console.log(td);
@@ -22,4 +22,5 @@ function checkSubject(checkbox) {
   //   // td.className = "";
   //   td.classList.remove("on");
   // }
+
 }

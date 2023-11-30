@@ -30,18 +30,12 @@
   right: 50px;
 }
 
-.p-relative {
-  position: relative;
-}
-.p-absolute {
-  position: absolute;
-}
-.p-fixed {
-  position: fixed;
-}
-.p-sticky {
+.p-relative { position: relative; }
+.p-absolute { position: absolute; }
+.p-fixed { position: fixed; }
+.p-sticky { 
   position: sticky;
-  top: 0px;
+  top: 0px; 
   background-color: goldenrod;
   z-index: 999; /* 값이 클수록 앞(사용자)에 위치 */
 }
@@ -55,7 +49,7 @@
   border: 1px solid #000;
   position: absolute;
 }
-.box1 {
+.box1{
   background-color: antiquewhite;
 }
 .box2 {
@@ -68,12 +62,6 @@
   top: 40px;
   left: 40px;
 }
-.z-10 {
-  z-index: 10;
-}
-.z-20 {
-  z-index: 20;
-}
-.z-30 {
-  z-index: 30;
-}
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }

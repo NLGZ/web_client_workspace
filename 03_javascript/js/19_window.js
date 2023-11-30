@@ -1,11 +1,12 @@
 /**
- * window
- * - 브라우저 최상위객체
- * - 탭별로 하나씩 존재함.
- *
+ * window 
+ * - 브라우져 최상위객체 
+ * - 탭별로 하나씩 존재함. 
+ * 
  * - BOM Browser Object Model - navigator, history, screen, ...
  * - DOM Document Object Model - document
  * - Javascript Object
+ * - ...
  */
 const test1 = () => {
   console.log(window);
@@ -14,105 +15,116 @@ const test1 = () => {
 /**
  * open
  * - 새창(탭/팝업)을 여는 함수
- * - 새창의 window객체를 반환. 해당 창에 대한 제어 가능
+ * - 새창의 window객체를 반환. 해당 창에 대한 제어가능
  */
 const test2 = () => {
-  //open(url, name, spec)
-  // open('01_hellojs.html', 'hellojs', '');
-  const newWindow = open(
-    "01_hellojs.html",
-    "hellojs",
-    "width=500, height=300, top=400, left=400"
-  );
-  // const newWindow = open('01_hellojs.html', '_self');
+  // open(url, name, spec)
+  // const newWindow = open('01_hellojs.html', 'hellojs', '');
+  const newWindow = open('01_hellojs.html', 'hellojs', 'width=500, height=300, top=400, left=400');
+  // const newWindow = open('01_hellojs.html', '_self'); // 현재 탭을 대체
   console.log(newWindow);
+  console.log(newWindow.opener); // 현재창
+
 
   setTimeout(() => {
     // newWindow.close();
-    newWindow.alert("악악헤악");
-    newWindow.document.write("<h1> 트으리 </h1>");
+    // newWindow.alert('🎈🎈🎈');
+    newWindow.document.write('<h1>🎄🎄🎄</h1>');
+    newWindow.opener.alert('🎈🎈🎈');
   }, 3000);
-};
+  
+}
+
 /**
- * Time API - setTimeout
+ * Timer API - setTimeout
  * - milli초 후에 callback함수 실행
- * - js의 시간은 쓰레드 스케쥴링에 의해 늘어질 수 있다.
+ * - js시간은 쓰레드스케쥴링에 의해 늘어질수 있다.
  */
 const test3 = () => {
   const timeoutId = setTimeout(() => {
-    alert("빵빠레");
+    alert('🎉🎉🎉');
   }, 1000);
-  console.log("취소");
+  console.log(timeoutId);
 };
 
 (() => {
   setTimeout(() => {
-    console.log("회원가입후 더많은 혜택을 누리세요");
+    console.log('회원가입후 더 많은 혜택을 누리세요~~');
   }, 5000);
 })();
+
 /**
  * setInterval(callbackFunction, millis)
- * - mills초 후에 callbackFunction을 실행
+ * - millis초후에 callbackFunction을 실행
  * - millis초 간격으로 callbackFunction을 실행
- * - clearInteval(id)취소하기 전까지 실행!!!
+ * - clearInterval(id)로 취소하기전까지 실행
  */
-let intervalid;
+let intervalId;
 const test4 = () => {
   let i = 1;
-  setInterval(() => {
+  intervalId = setInterval(() => {
     console.log(i++);
   }, 1000);
-  console.log(intervalid, "번 인터벌이 등록되었습니다.");
-};
+  console.log(intervalId, '번 인터벌이 등록되었습니다.');
+}
 
 /**
  * 사용자 타이머
  */
-let timeoutId;
+let timeoutId; 
 const test5 = () => {
-  const message = document.getElementById("message").value;
-  const seconds = document.getElementById("sec").value;
-
-  // Perform actions with 'message' and 'seconds' values, e.g., set a timer
-  console.log(`Message: ${message}, Seconds: ${seconds}`);
-
-  // Example: Set a timer to display the message after the specified seconds
-  const messageVal = message.value;
-
-  if (!message.value || !sec.value) {
-    alert("유효한 값을 입력하세요");
+  const message = document.querySelector("#message");
+  const sec = document.querySelector("#sec");
+  console.log(message.value, sec.value);
+  
+  // 유효성검사 
+  if(!message.value || !sec.value) {
+    alert('유효한 값을 입력하세요🤬');
     return;
   }
-  setTimeout(() => {
+  
+  const messageVal = message.value;
+  timeoutId = setTimeout(() => {
     alert(messageVal);
-    timeoutId = undefined;
-  }, seconds * 1000);
-  console.log(timeoutId, "번 타이머가 설정되었습니다.");
+    timeoutId = undefined; // id제거
+  }, sec.value * 1000);
+  console.log(timeoutId, '번 타이머가 설정되었습니다.');
 
-  //초기화
-  message.value = "";
-  sec.value = "";
+  // 초기화 
+  message.value = '';
+  sec.value = '';
 };
 
 const test6 = () => {
-  if (timeoutId) {
+  if(timeoutId) {
     clearTimeout(timeoutId);
-    alert("타이머가 취소되었습니다");
+    alert('타이머가 취소 되었습니다.😀');
   }
 };
+
 
 /**
  * 초시계
  */
-
-const clock = (n) => n <10 ? ;{
+const f = (n) => n < 10 ? '0' + n : n;
+const clock = () => {
   const d = new Date();
-  const hh = d.getHours
-  const hh = d.getMinutes
-  const hh = d.getSeconds
-  console.log(`$hh~`);
-  
-}
+  const hh = f(d.getHours());
+  const mm = f(d.getMinutes());
+  const ss = f(d.getSeconds());
+  console.log(`${hh}:${mm}:${ss}`);
+  return `${hh}:${mm}:${ss}`;
+};
 
-document.querySelector("#clocdk-display"
-    document.)
+const displayClock = () => document.querySelector("#clock-display").innerHTML = clock();  
+displayClock();
+setInterval(displayClock, 1000);
+
+
+
+
+
+
+
+
+

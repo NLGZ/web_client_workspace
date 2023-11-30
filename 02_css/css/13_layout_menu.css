@@ -3,7 +3,7 @@ ul.menu {
   padding: 0;
   margin: 0 auto;
   list-style-type: none;
-
+  
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,17 +22,17 @@ ul.menu li {
   flex-wrap: wrap;
 }
 ul.menu > li:first-child {
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
 }
 ul.menu > li:last-child {
-  border-top-right-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
   border-right: 0;
 }
 ul.menu li a {
   display: block;
-  padding: 0.5em;
+  padding: .5em;
   text-decoration: none;
   color: #292929;
 }

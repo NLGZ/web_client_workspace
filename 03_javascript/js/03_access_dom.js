@@ -6,45 +6,47 @@ console.log(document);
 /**
  * document.getElementById(id: string): HTMLElement | null
  */
-function getById() {
+function getById(){
   const li1 = document.getElementById("li1");
   console.log(li1, typeof li1);
   console.dir(li1); // 객체 계층구조로 열람
 
   console.log(li1.innerHTML); // getter
-  li1.innerHTML = "안녕 자바스크립트 1"; // setter
+  li1.innerHTML = '안녕 자바스크립트 1'; // setter
 
-  const notExist = document.getElementById("aslkdjflasdfjasdf");
+  const notExist = document.getElementById("aslkdjflasdfjasdf"); 
   // null : object타입의 값없음 의미
   console.log(notExist, typeof notExist); // null 'object'
+
 }
 
 /**
- * document.getElementsByTagName(tagName: string): object[]
+ * document.getElementsByTagName(tagName: string): object[] 
  */
-function getByTag() {
+function getByTag(){
   const list = document.getElementsByTagName("li");
   console.log(list, typeof list);
 
-  for (let i = 0; i < list.length; i++) {
+  for(let i = 0; i < list.length; i++) {
     console.dir(list[i]);
-    list[i].style.backgroundColor = "hotpink";
-    list[i].style.color = "white";
+    list[i].style.backgroundColor = 'hotpink';
+    list[i].style.color = 'white';
   }
 }
 
 /**
  * document.getElementsByClassName(class: string): object[]
  */
-function getByClass() {
+function getByClass(){
   const group1 = document.getElementsByClassName("group1");
   // const groups = document.getElementsByClassName("group1 group2");
   console.log(group1, typeof groupt1);
 
   // Hello JS 1 [GROUP1]
-  for (let i = 0; i < group1.length; i++) {
+  for(let i = 0; i < group1.length; i++) {
     group1[i].innerHTML += " [GROUP1]";
   }
+
 }
 
 /**
@@ -54,9 +56,9 @@ function getByName() {
   const hobbies = document.getElementsByName("hobby");
   console.log(hobbies, typeof hobbies);
 
-  let hobbyChecked = "";
-  for (let i = 0; i < hobbies.length; i++) {
-    if (hobbies[i].checked) {
+  let hobbyChecked = '';
+  for(let i = 0; i < hobbies.length; i++) {
+    if(hobbies[i].checked) {
       hobbyChecked += hobbies[i].value + " ";
     }
   }
@@ -67,12 +69,12 @@ function getByName() {
 /**
  * [name=hobby] 체크박스를 모두 선택/해제
  */
-function checkAll() {
+function checkAll(){
   const hobbies = document.getElementsByName("hobby");
   const all = document.getElementById("all");
   // id가 유일하기 때문에 해당 아이디를 변수처럼 바로 사용가능
 
-  for (let i = 0; i < hobbies.length; i++) {
+  for(let i = 0; i < hobbies.length; i++){
     hobbies[i].checked = all.checked;
   }
 }
@@ -82,7 +84,7 @@ function test1() {
 
   // const inputs = document.getElementsByTagName("input");
   // const name = inputs[4];
-
+  
   // const inputs = document.getElementsByClassName("user-input");
   // const name = inputs[0];
 
@@ -121,9 +123,10 @@ function _querySelector() {
 function _querySelectorAll() {
   const list = document.querySelectorAll("li.group1");
   console.log(list);
-
+  
   // list.innerHTML = 'xxxxx'; // 배열객체에는 innerHTML 속성이 없다.
-  for (let i = 0; i < list.length; i++) {
-    list[i].innerHTML = "xxxxxx";
+  for(let i = 0; i < list.length; i++) {
+    list[i].innerHTML = 'xxxxxx';
   }
+
 }

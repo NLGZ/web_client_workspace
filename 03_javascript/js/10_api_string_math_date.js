@@ -5,20 +5,20 @@
  */
 function test1() {
   const str = "Apple Samsung PineApple";
-
+  
   console.log(str);
   console.log(str.length); // 23
   // for(let i = 0; i < str.length; i++){
   //   console.log(str[i], str.charAt(i));
   // }
-
+  
   console.log(str.toLowerCase()); // Immutable
   console.log(str.toUpperCase()); // Immutable
   console.log(str);
 
-  console.log(str.indexOf("Sam")); // 6
-  console.log(str.indexOf("Apple")); // 0
-  console.log(str.lastIndexOf("Apple")); // 18
+  console.log(str.indexOf('Sam')); // 6
+  console.log(str.indexOf('Apple')); // 0
+  console.log(str.lastIndexOf('Apple')); // 18
 
   // substring(start, end)
   // substr(start, length)
@@ -29,10 +29,10 @@ function test1() {
 
   // replace(search, newStr)
   // replaceAll(search, newStr) - ECMA2021에 추가
-  console.log(str.replace("Apple", "사과"));
-  console.log(str.replaceAll("Apple", "사과"));
+  console.log(str.replace('Apple', '사과'));
+  console.log(str.replaceAll('Apple', '사과'));
 
-  console.log(str.split(" ")); // ['Apple', 'Samsung', 'PineApple']
+  console.log(str.split(' ')); // ['Apple', 'Samsung', 'PineApple']
 }
 
 /**
@@ -41,19 +41,22 @@ function test1() {
  */
 function test2() {
   const str = prompt("문자열을 입력하세요");
-  if (!str) {
+  if(!str) {
     alert("유효한 문자열을 입력해주세요.");
     return;
   }
 
   let cnt = 0;
-  for (let i = 0; i < str.length; i++) {
+  for(let i = 0; i < str.length; i++){
     console.log(str[i]);
-    if (str[i] >= "A" && str[i] <= "Z") cnt++;
-    if (str[i] >= "a" && str[i] <= "z") cnt++;
+    if(str[i] >= "A" && str[i] <= "Z") 
+      cnt++;
+    if(str[i] >= "a" && str[i] <= "z")
+      cnt++;
   }
   alert(`입력하신 문자열 ${str}에서 알파벳의 개수는 ${cnt}개입니다. 😁`);
 }
+
 
 /**
  * Math
@@ -66,16 +69,16 @@ function test2() {
 function test3() {
   // 0.0이상 1.0미만의 실수를 반환
   // Math.trunc(Math.random() * 경우의수 + 최소값)
-  console.log(Math.trunc(Math.random() * 10 + 1));
+  console.log(Math.trunc(Math.random() * 10 + 1)); 
 
   console.log(Math.ceil(12.34));
   console.log(Math.round(12.5));
-  console.log(Math.floor(12.34));
+  console.log(Math.floor(12.34)); 
   console.log(Math.trunc(12.34)); // 소수점이하 버림
 
   console.log(Math.floor(-3.4), Math.trunc(-3.4)); // -4 -3
 
-  // 123.456 반올림해서 123.46이 출력!
+  // 123.456 반올림해서 123.46이 출력! 
   console.log(Math.round(123.456 * 100) / 100);
 }
 
@@ -89,18 +92,18 @@ function test4() {
   const list = document.querySelectorAll("ul#nums li");
   console.log(list);
 
-  for (let i = 0; i < list.length; i++) {
-    list[i].style.color = "initial"; // initial | inherit
+  for(let i = 0; i < list.length; i++) {
+    list[i].style.color = 'initial'; // initial | inherit
     const n = Math.trunc(Math.random() * 100 + 1);
     list[i].innerText = n;
-    n % 2 == 0 && (list[i].style.color = "hotpink");
+    n % 2 == 0 && (list[i].style.color = 'hotpink');
   }
 }
 
 /**
  * Date
  * - 날짜/시각을 관리하는 객체
- * - 기본적으로 시스템시각을 읽어와서 사용함.
+ * - 기본적으로 시스템시각을 읽어와서 사용함. 
  */
 function test5() {
   const now = new Date(); // new 생성자함수 호출!
@@ -108,21 +111,23 @@ function test5() {
 
   console.log(now.getFullYear());
   console.log(now.getMonth() + 1); // 0 ~ 11
-  console.log(now.getDate());
-
-  console.log(now.getHours());
-  console.log(now.getMinutes());
-  console.log(now.getSeconds());
+  console.log(now.getDate()); 
+  
+  console.log(now.getHours()); 
+  console.log(now.getMinutes()); 
+  console.log(now.getSeconds()); 
 
   console.log(Date.now()); // UTC Time/초 (Epoch Time)
 
   const date = new Date(1700460429073); // UTC Time을 Date객체 생성하기
   console.log(date);
 
-  // 특정 날짜/시각객체
+  // 특정 날짜/시각객체 
   const someday = new Date(1999, 8, 9, 12, 30); // 월은 0-based 숫자
   console.log(someday);
+
 }
+
 
 /**
  * start, end시각을 밀리초로 각각 구해서 차이를 계산
@@ -133,13 +138,14 @@ function test6() {
   // const end = Date.now();
   // console.log((end - start), 'ms');
 
-  console.time("Test");
+  console.time('Test');
   foo();
-  console.timeEnd("Test");
+  console.timeEnd('Test');
 }
 
 function foo() {
   let sum = 0;
-  for (let i = 0; i < 1000000; i++) sum += i;
+  for(let i = 0; i < 1000000; i++)
+    sum += i;
   console.log(sum);
 }

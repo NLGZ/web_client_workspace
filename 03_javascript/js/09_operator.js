@@ -23,13 +23,13 @@ function test1() {
 
   // if(num % 2 == 0)
   //   alert("짝수입니다.");
-  // else
+  // else 
   //   alert("홀수입니다.");
 
   // null || (실행문)
   // false || (실행문)
-  document.querySelector("#foo") ||
-    (document.body.innerHTML += '<div id="foo">😎😎😎</div>');
+  document.querySelector("#foo") 
+    || (document.body.innerHTML += '<div id="foo">😎😎😎</div>');
 }
 
 /**

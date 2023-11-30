@@ -1,82 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML | Image</title>
-  </head>
-  <body>
-    <h1>Image</h1>
-    <!-- src 이미지경로. 절대/상대경로 모두 사용가능. 
-         alt 대체텍스트. 이미지로드에 실패시 화면에 노출될 텍스트. 스크린리더에 의해 해석/전달됨. 
-    -->
-    <img
-      src="../sample/image/flower1.PNG"
-      alt="분홍색 벚꽃 이미지"
-      style="width: 300px"
-    />
-    <img
-      src="https://edas96.synology.me:55484/fbdownload/e1f20f9b-1ee3-478a-a3a0-ca16ee82b9f8.gif?tid=%22vRkvPr4OKKjtBmtyqe6W2wUQo9RIS1kdnx5I%22&mode=open&dlink=%222f7765622f7765625f696d616765732f65316632306639622d316565332d343738612d613361302d6361313665653832623966382e676966%22&stdhtml=true&SynoToken=uC7A66DBqIlrk"
-      alt="지옥참마도"
-      style="width: 300px"
-    />
-    <br />
-    <img
-      src="https://i.namu.wiki/i/jh7YF62dbpI8trh7CWiFeq-sN5NQYnnIslixUTiAWaujOUAnaLxtGd2eJkFCRj_sp6GHpWXSuWaCEGCYbVqRzg.webp"
-      alt="지옥참마도"
-      style="width: 300px"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML | Image</title>
+</head>
+<body>
+  <h1>Image</h1>
+  <!-- 
+    src 이미지경로. 절대/상대경로
+    alt 대체텍스트. 이미지로드에 실패시 화면에 노출될 텍스트. 스크린리더에 의해 해석/전달됨.
+  -->
+  <img 
+    src="../sample/image/flower1.PNG" 
+    alt="분홍색 벚꽃 이미지" 
+    style="width: 300px;">
+  <img 
+    src="/sample/image/flower1.PNG" 
+    alt="분홍색 벚꽃 이미지" 
+    style="width: 300px;">
+  <img 
+    src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*" 
+    alt="아기 리트리버" 
+    style="width: 300px;">
 
-    <h2>절대 | 상대단위</h2>
-    <div>
-      <img src="../sample/image/flower1.PNG" width="100px" alt=" " />
-      <img src="../sample/image/flower2.PNG" width="100px" alt=" " />
-      <img src="../sample/image/flower3.PNG" width="100px" alt=" " />
-      <img src="../sample/image/flower4.PNG" width="100px" alt=" " />
-      <img src="../sample/image/flower5.PNG" width="100px" alt=" " />
-    </div>
-    <h3>% 상대(가변)단위</h3>
-    <!-- 부모태그 기준으로 상대크기를 결정 -->
-    <div>
-      <img src="../sample/image/flower1.PNG" width="18%" alt=" " />
-      <img src="../sample/image/flower3.PNG" width="18%" alt=" " />
-      <img src="../sample/image/flower4.PNG" width="18%" alt=" " />
-      <img src="../sample/image/flower5.PNG" width="18%" alt=" " />
-      <img src="../sample/image/flower2.PNG" width="18%" alt=" " />
-    </div>
+  <h2>절대 | 상대 단위</h2>
+  <h3>px 절대단위</h3>
+  <div>
+    <img src="../sample/image/flower1.PNG" width="100px" alt="">
+    <img src="../sample/image/flower2.PNG" width="100px" alt="">
+    <img src="../sample/image/flower3.PNG" width="100px" alt="">
+    <img src="../sample/image/flower4.PNG" width="100px" alt="">
+    <img src="../sample/image/flower5.PNG" width="100px" alt="">
+  </div>
+  <h3>% 상대(가변)단위</h3>
+  <!-- 부모태그 기준으로 상대크기를 결정 -->
+  <div>
+    <img src="../sample/image/flower1.PNG" width="18%" alt="">
+    <img src="../sample/image/flower2.PNG" width="18%" alt="">
+    <img src="../sample/image/flower3.PNG" width="18%" alt="">
+    <img src="../sample/image/flower4.PNG" width="18%" alt="">
+    <img src="../sample/image/flower5.PNG" width="18%" alt="">
+  </div>
 
-    <h2>정렬</h2>
-    <!-- div>img+p>lorem -->
-    <div>
-      <img
-        src="../sample/image/river1.PNG"
-        width="200px"
-        style="float: left; margin: 10px"
-        alt=""
-      />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ab eius
-        odio earum, unde placeat maiores magnam perspiciatis quasi?
-        Reprehenderit eius aliquid maxime sint doloremque asperiores minus
-        labore adipisci culpa?
-      </p>
-    </div>
+  <h2>정렬 float</h2>
+  <!-- div>img+p>lorem -->
+  <div>
+    <img 
+      src="../sample/image/river1.PNG" 
+      width="200px" 
+      style="float: left; margin: 10px;" 
+      alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad molestias repudiandae quibusdam adipisci consequuntur dolore eaque blanditiis consectetur illo cupiditate, laboriosam quidem qui ullam in magni, commodi quo dolorum.</p>
+  </div>
+  <div>
+    <img 
+      src="../sample/image/river1.PNG" 
+      width="200px" 
+      style="float: right; margin: 10px;" 
+      alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ad molestias repudiandae quibusdam adipisci consequuntur dolore eaque blanditiis consectetur illo cupiditate, laboriosam quidem qui ullam in magni, commodi quo dolorum.</p>
+  </div>
 
-    <div>
-      <img
-        src="../sample/image/river1.PNG"
-        width="200px"
-        style="float: right; margin: 10px"
-        alt=""
-      />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ab eius
-        odio earum, unde placeat maiores magnam perspiciatis quasi?
-        Reprehenderit eius aliquid maxime sint doloremque asperiores minus
-        labore adipisci culpa?
-      </p>
-    </div>
 
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-  </body>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
 </html>

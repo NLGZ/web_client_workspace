@@ -1,19 +1,19 @@
 #title {
-  color: red !important; /* !important << ovverride(덮어쓰기 금지) */
+  color: red !important; /* override 금지 */
   text-decoration: underline;
 }
 
-#box { 
+#box {
   width: 100px;
   height: 100px;
   border: 3px solid blue;
-   background-color: burlywood;/*금메달  */
+  background-color: burlywood;
 }
 
-div {
-  background-color: pink; /*동메달 */
+/* 동1(div), 은1(.foo), 은1([title]) */
+div.foo[title=box] {
+  background-color: pink !important; 
 }
-.foo { 
-  background-color: aquamarine; /*은메달 */
+.foo {
+  background-color: aquamarine;
 }
-

@@ -62,12 +62,12 @@ function test3() {
   console.log(Number(num)); // 123.456
   console.log(parseInt(num)); // 123
   console.log(parseFloat(num)); // 123.456
-
+  
   const num2 = '123.456원';
   console.log(Number(num2)); // NaN
   console.log(parseInt(num2)); // 123
   console.log(parseFloat(num2)); // 123.456
-
+  
   const num3 = '$123.456';
   console.log(Number(num3)); // NaN
   console.log(parseInt(num3)); // NaN
@@ -125,7 +125,8 @@ function test5() {
   // false
   console.log(Boolean(0));
   console.log(Boolean(0.0));
-  console.log(Boolean("")); //공백은 true임
+  console.log(Boolean(""));
   console.log(Boolean(undefined));
   console.log(Boolean(null));
   console.log(Boolean(Number("abc"))); // NaN
+}
